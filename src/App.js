@@ -1,7 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.scss'
 
 function App() {
+  const [isHovering, setIsHovering] = useState(false)
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
+
+  function unsecuredCopyToClipboard(text) {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    try {
+      document.execCommand('copy');
+    } catch (err) {
+      console.error('Unable to copy to clipboard', err);
+    }
+    document.body.removeChild(textArea);
+  }
+
+  const copyToClipboard = (content) => {
+    if (window.isSecureContext && navigator.clipboard) {
+      navigator.clipboard.writeText(content);
+    } else {
+      unsecuredCopyToClipboard(content);
+    }
+  };
+
   return (
     <div className="App">
       <header>
@@ -10,13 +41,14 @@ function App() {
           <p>Dada Olawunmi</p>
         </div>
         <p className='slack'>@Dread</p>
-        <button className='share'>
+        <button className='share' onClick={() => copyToClipboard('linkxxgf')} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
           <img src='../images/share.png' alt='share link' />
         </button>
-        <button className='share-mob'>
+        <button className='share-mob' onClick={() => copyToClipboard('link65xxx')} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
           <img src='../images/share-mob.png' alt='share link' />
         </button>
       </header>
+      {isHovering && <p className='hover-text'>Click to copy link</p>}
       <main className='links'>
         <a className='twitter' href='https://www.twitter.com/dread557' target="_blank" rel="noopener noreferrer">Twitter Link</a>
         <a className='btn__zuri' href='https://training.zuri.team/' target="_blank" rel="noopener noreferrer">Zuri Team</a>
