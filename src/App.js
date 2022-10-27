@@ -41,10 +41,17 @@ function App() {
           <p>Dada Olawunmi</p>
         </div>
         <p className='slack'>@Dread</p>
-        <button className='share' onClick={() => copyToClipboard('linkxxgf')} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+        <button className='share'
+          onClick={() => copyToClipboard('https://linktree-six-sable.vercel.app/')}
+          onMouseOver={handleMouseOver}
+          onMouseOut={handleMouseOut}>
           <img src='../images/share.png' alt='share link' />
         </button>
-        <button className='share-mob' onClick={() => copyToClipboard('link65xxx')} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+        <button
+          className='share-mob'
+          onClick={() => copyToClipboard('https://linktree-six-sable.vercel.app/')}
+          onMouseOver={handleMouseOver}
+          onMouseOut={handleMouseOut}>
           <img src='../images/share-mob.png' alt='share link' />
         </button>
       </header>
