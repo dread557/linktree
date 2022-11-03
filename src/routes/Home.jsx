@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -62,6 +63,7 @@ const Home = () => {
                 <a className='book__python' id='book__python' href='https://books.zuri.team/python-for-beginners?ref_id=dread' target="_blank" rel="noopener noreferrer">Python Book</a>
                 <a className='pitch' id='pitch' href='https://background.zuri.team/' target="_blank" rel="noopener noreferrer">Background Check for Coders</a>
                 <a className='book__design' id='book__design' href='https://books.zuri.team/design-rules' target="_blank" rel="noopener noreferrer">Design Books</a>
+                <Link to='/contact' id='contact' className='contact'>Contact Me</Link>
                 <section className='slack_git'>
                     <img src='../images/slack.png' alt='slack' />
                     <img src='../images/Icon.png' alt='github' />
