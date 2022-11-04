@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.scss'
 import { Routes, Route } from 'react-router-dom'
 import Footer from './components/Footer'
 import Home from './routes/Home'

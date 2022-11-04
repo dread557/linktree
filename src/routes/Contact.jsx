@@ -1,6 +1,10 @@
 import React from 'react'
+import '../styles/contact.scss'
 
 const Contact = () => {
+
+    const name = 'dread'
+
     return (
         <div className='contact-wrapper'>
             <h1>Contact</h1>
@@ -23,7 +27,7 @@ const Contact = () => {
                     <input type='textarea' id='message' placeholder="Send me a message and I'll reply as soon as possible..." />
                     <div className='agree'>
                         <input type='radio' />
-                        <p>You agree to providing your data to dread who may contact you.</p>
+                        <p>You agree to providing your data to {name} who may contact you.</p>
                     </div>
                     <button id='btn__submit'>Send message</button>
                 </form>
