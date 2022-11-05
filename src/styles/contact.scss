@@ -2,6 +2,15 @@
     max-width:  720px;
     margin: 0 auto;
 
+    .message-success {
+        background-color: rgb(15, 189, 15);
+        color: white;
+        text-align: center;
+        margin: auto;
+        width: fit-content;
+        padding: 5px;
+    }
+
     h1{
         font-size: 2.25rem;
     }
@@ -28,23 +37,34 @@
         }
     }
 
+    input[type='textarea'] {
+        height: 132px;
+    } 
+
+    .error {
+        font-size: 14px;
+        color: #F83F23;
+        margin-bottom: 6px;
+        // display: none;
+    }
+
     .names {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
     }
 
-    input[type='textarea'] {
-        height: 132px;
-    }
-
     .agree {
         display: flex;
         gap: 20px;
 
-        input[type='radio'] {
+        input[type='checkbox'] {
             height: 15px;
             width: auto;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
         p {
             margin: 0;
@@ -59,7 +79,13 @@
         border-radius: 8px;
         color: #fff;
         margin-top: 2.3rem;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
+
+
 }
 
 @media screen and (max-width: 768px) {
