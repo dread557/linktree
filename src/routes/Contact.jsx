@@ -21,7 +21,6 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setFormErrors(validate(formValues));
-        setFormValues(initialValues)
         setIsSubmit(true);
     }
 
